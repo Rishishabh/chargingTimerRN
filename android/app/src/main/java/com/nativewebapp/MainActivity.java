@@ -11,7 +11,13 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
 
-        // Set a layout if you have one, or leave it out for React Native
-        // setContentView(R.layout.activity_main); // optional
+        WebView webView = new WebView(this);
+        webView.getSettings().setJavaScriptEnabled(true); // if needed
+        webView.setWebViewClient(new WebViewClient());
+
+        // Load index.html from assets
+        webView.loadUrl("file:///android_asset/web/index.html");
+
+        setContentView(webView);
     }
 }
