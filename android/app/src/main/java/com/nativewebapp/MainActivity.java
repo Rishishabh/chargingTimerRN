@@ -4,9 +4,8 @@ package com.nativewebapp;
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
 import com.nativewebapp.R;
-import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Set theme before super.onCreate
