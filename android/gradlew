@@ -1,4 +1,5 @@
 #!/bin/sh
-export JAVA_HOME=${JAVA_HOME:-$(/usr/libexec/java_home)}
-DIR="$( cd "$( dirname "$0" )" && pwd )"
-exec "$DIR/gradle/wrapper/gradle-wrapper.jar" "$@"
+DIR="$(cd "$(dirname "$0")" && pwd)"
+JAVA_BIN="${JAVA_HOME}/bin/java"
+
+"$JAVA_BIN" -jar "$DIR/gradle/wrapper/gradle-wrapper.jar" "$@"
