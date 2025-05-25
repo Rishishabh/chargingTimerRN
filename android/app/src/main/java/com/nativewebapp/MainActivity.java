@@ -11,6 +11,7 @@ public class MainActivity extends ReactActivity {
         // Set theme before super.onCreate
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.main_activity);
     }
     
     @Override
