@@ -3,6 +3,8 @@ package com.nativewebapp;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.nativewebapp.R;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
     @Override
