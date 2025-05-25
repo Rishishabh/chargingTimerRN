@@ -1,11 +1,11 @@
 
 buildscript {
     ext {
-        buildToolsVersion = "34.0.0"
+        buildToolsVersion = "33.0.0"
         minSdkVersion = 21
-        compileSdkVersion = 34
-        targetSdkVersion = 34
-        kotlinVersion = "1.8.0" // Optional, based on usage
+        compileSdkVersion = 33
+        targetSdkVersion = 33
+        kotlinVersion = "1.8.0"
         reactNativeGradlePluginVersion = "0.72.0" // ✅ Add this
     }
     repositories {
@@ -20,6 +20,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        mavenCentral { url("$rootDir/../node_modules/react-native/android") }
+        mavenCentral()
+        maven { url("$rootDir/../node_modules/react-native/android") }
     }
 }
