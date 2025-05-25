@@ -1,2 +1,2 @@
 rootProject.name = "nativewebapp"
-include(":app")
+include ':app'
