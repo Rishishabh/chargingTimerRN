@@ -1,19 +1,16 @@
 workflows:
-  android-manual-gradle:
-    name: Android Manual Gradle Build
+ android-no-wrapper:
+    name: Android Build Without Gradle Wrapper
     max_build_duration: 60
     environment:
-      vars:
-        JAVA_HOME: /opt/android-sdk-linux/tools/lib/jvm/java-17-openjdk
+      node: 18
+      java: 17
     scripts:
-      - name: Install system Gradle
-        script: |
-          sudo apt-get update
-          sudo apt-get install -y gradle
-      - name: Build Debug APK
+      - name: Install npm dependencies
+        script: npm install
+      - name: Build release APK
         script: |
           cd android
           gradle assembleDebug
-
     artifacts:
       - android/app/build/outputs/**/*.apk
