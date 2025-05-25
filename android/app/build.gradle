@@ -3,12 +3,12 @@ apply plugin: "com.android.application"
 apply from: "../../node_modules/react-native/react.gradle"
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.nativewebapp"
-        minSdkVersion 24
-        targetSdkVersion 34
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
