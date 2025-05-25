@@ -4,11 +4,11 @@
 
     <application
         android:label="Native Web App"
-        android:theme="@style/Theme.AppCompat">
+        android:theme="@style/Theme.AppCompat.Light">
         <activity 
             android:name=".MainActivity"
             android:label="Native Web App"
-            android:theme="@style/Theme.AppCompat"
+            android:theme="@style/Theme.AppCompat.Light"
             android:exported="true"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustResize">
