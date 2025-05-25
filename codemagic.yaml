@@ -1,18 +1,19 @@
 workflows:
-  build-android:
-    name: Build Android App
-    max_build_duration: 30
+  android-manual-gradle:
+    name: Android Manual Gradle Build
+    max_build_duration: 60
     environment:
       vars:
-        PACKAGE_NAME: "com.nativewebapp"
+        JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
     scripts:
-      - name: Install dependencies
+      - name: Install system Gradle
         script: |
-          npm install
-      - name: Build APK
+          sudo apt-get update
+          sudo apt-get install -y gradle
+      - name: Build Debug APK
         script: |
           cd android
-          chmod +x gradlew
-          ./gradlew assembleDebug
+          gradle assembleDebug
+
     artifacts:
       - android/app/build/outputs/**/*.apk
