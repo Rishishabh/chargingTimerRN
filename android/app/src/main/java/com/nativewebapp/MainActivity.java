@@ -1,20 +1,17 @@
-
 package com.nativewebapp;
 
-import com.facebook.react.ReactActivity;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import com.nativewebapp.R;
 
-public class MainActivity extends ReactActivity {
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Set theme before super.onCreate
+        // Apply the AppCompat theme before the activity is created
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
-    }
-    
-    @Override
-    protected String getMainComponentName() {
-        return "nativewebapp";
+
+        // Set a layout if you have one, or leave it out for React Native
+        // setContentView(R.layout.activity_main); // optional
     }
 }
