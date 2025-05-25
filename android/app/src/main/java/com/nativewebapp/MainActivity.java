@@ -9,7 +9,7 @@ public class MainActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Set theme before super.onCreate
-        setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
     }
     
