@@ -5,10 +5,12 @@
     <application
         android:label="Native Web App"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity"
+        <activity 
+            android:name=".MainActivity"
+            android:label="Native Web App"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="true"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="Native Web App"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
