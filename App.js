@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <WebView originWhitelist={['*']} source={{ uri: htmlFile }} />
+      <WebView originWhitelist={['*']} source={{ uri: https://google.com }} />
     </View>
   );
 };
