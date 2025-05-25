@@ -1,29 +1,26 @@
-
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Platform } from 'react-native';
-import { Asset } from 'expo-asset';
-import * as FileSystem from 'expo-file-system';
+import { View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-export default function App() {
+const App = () => {
+  const htmlFile =
+    Platform.OS === 'android'
+      ? 'file:///android_asset/web/index.html'
+      : './web/index.html';
+
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <WebView
-        originWhitelist={['*']}
-        source={Platform.OS === 'android' ? { uri: 'file:///android_asset/web/index.html' } : require('./src/web/index.html')}
-        allowFileAccess={true}
-        allowUniversalAccessFromFileURLs={true}
-        javaScriptEnabled
-        domStorageEnabled
-        style={styles.webview}
-      />
-    </SafeAreaView>
+    <View style={styles.container}>
+      <WebView originWhitelist={['*']} source={{ uri: htmlFile }} />
+    </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  webview: {
+  container: {
     flex: 1,
   },
 });
+
+export default App;
