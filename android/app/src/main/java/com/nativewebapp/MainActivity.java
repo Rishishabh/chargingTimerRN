@@ -3,7 +3,6 @@ package com.nativewebapp;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
-import androidx.appcompat.R;
 import com.nativewebapp.R;
 
 public class MainActivity extends ReactActivity {
